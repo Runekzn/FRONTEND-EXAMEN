@@ -1,0 +1,3 @@
+.isActive{
+  @apply bg-cyan-500 text-white transition-colors dark:bg-cyan-200
+}

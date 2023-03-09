@@ -1,0 +1,174 @@
+<div class="fixed z-10 inset-0 overflow-y-auto bg-white/70 dark:bg-black/70 ">
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8">
+      <h3 class="mb-4 text-xl font-medium text-gray-900 text-center dark:text-gray-100">
+        Encuesta
+      </h3>
+      <form
+        class="grid sm:grid-cols-2 w-full gap-5"
+        action="#"
+        [formGroup]="form"
+        #frmCategoria="ngForm"
+        (ngSubmit)="operar()"
+      >
+        <div [hidden]="true">
+          <label for="email" class="dark:text-gray-100 hidden mb-2 text-sm font-medium text-gray-900"
+            >Id</label
+          >
+          <input
+            type="id"
+            name="id"
+            id="id"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Id"
+            required
+            formControlName="id"
+          />
+        </div>
+
+        <div>
+          <label for="email" class=" dark:text-gray-100 block text-sm font-medium text-gray-900 "
+            >Pregunta 1</label>
+
+          <label class="text-xs text-slate-500">Le despacharon los productos revisando la factura</label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Si o No"
+            required
+            formControlName="pregunta1"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="dark:text-gray-100 block text-sm font-medium text-gray-900"
+            >Pregunta 2</label
+          >
+          <label class="text-xs text-slate-500">Le entregaron la factura</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Si o No"
+            required
+            formControlName="pregunta2"
+          />
+        </div>
+
+        <div>
+          <label for="email" class=" dark:text-gray-100 block text-sm font-medium text-gray-900"
+            >Pregunta 3</label
+          >
+          <label class="text-xs text-slate-500">La amabilidad del cajero</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Del 1 al 10"
+            required
+            formControlName="pregunta3"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="dark:text-gray-100 block text-sm font-medium text-gray-900"
+            >Pregunta 4</label
+          >
+          <label class="text-xs text-slate-500">Le satisfaccion en general</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Del 1 al 10"
+            required
+            formControlName="pregunta4"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="dark:text-gray-100 block  text-sm font-medium text-gray-900"
+            >Pregunta 5</label
+          >
+          <label class="text-xs text-slate-500">Le satisfaccion en general</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Del 1 al 10"
+            required
+            formControlName="pregunta5"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="dark:text-gray-100 block  text-sm font-medium text-gray-900"
+            >Observaciones</label
+          >
+          <label for="" class="text-xs text-slate-500">Ingrese sus observaciones</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Observaciones"
+            required
+            formControlName="observaciones"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="dark:text-gray-100 block mb-2 text-sm font-medium text-gray-900"
+            >Encuestado</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Encuestado"
+            required
+            formControlName="encuestado"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="dark:text-gray-100 block mb-2 text-sm font-medium text-gray-900"
+            >Sucursal</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Sucursal"
+            required
+            formControlName="sucursal"
+          />
+        </div>
+
+
+        <button
+          type="submit"
+          class="w-full text-white disabled:opacity-75 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          [disabled]="frmCategoria.invalid"
+        >
+          <h1>Añadir Encuesta</h1>
+        </button>
+        <button
+          type="button"
+          class="w-full text-white disabled:opacity-75 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          routerLink="/encuesta"
+        >
+          Cancelar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

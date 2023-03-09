@@ -1,0 +1,49 @@
+<nav class="relative flex flex-wrap items-center justify-between rounded-md p-4 bg-opacity-80 ">
+  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between items-center lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+      <a class="text-sm leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase font-bold tracking-tighter dark:text-red-400 text-red-500" >
+        EXAMEN
+      </a>
+      <button class=" dark:text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none transition-opacity" type="button" (click)="toggleNavbar()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"  [ngClass]="{'hidden': showMenu, 'flex': !showMenu}" >
+          <path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5" [ngClass]="{'hidden': !showMenu, 'flex': showMenu}">
+          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+        </svg>
+      </button>
+    </div>
+    <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
+      <ul class="flex flex-col lg:flex-row list-none ml-auto gap-2 items-center">
+
+
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:bg-[#caf0f8]/30 dark:hover:bg-cyan-300/30 transition-all delay-75 rounded-full " routerLink="encuesta" routerLinkActive="isActive"  [routerLinkActiveOptions]={exact:true} [ngClass]="isActive ? 'bg-sky-500 text-white' : 'text-slate-500'">
+            <span class=" dark:text-slate-300">Encuesta</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:bg-[#caf0f8]/30 dark:hover:bg-cyan-300/30  transition-all delay-75 rounded-full " routerLink="sucursal" routerLinkActive="isActive"  [routerLinkActiveOptions]={exact:true} [ngClass]="isActive ? 'bg-sky-500 text-white' : 'text-slate-500'">
+            <span class=" dark:text-slate-300">Sucursal</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:bg-[#caf0f8]/30 dark:hover:bg-cyan-300/30   transition-all delay-75 rounded-full " routerLink="encuestado" routerLinkActive="isActive"  [routerLinkActiveOptions]={exact:true} [ngClass]="isActive ? 'bg-sky-500 text-white' : 'text-slate-500'">
+            <span class=" dark:text-slate-300">Encuestado</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug  hover:bg-[#caf0f8]/30 dark:hover:bg-cyan-300/30  transition-all delay-75 rounded-full " >
+           <app-darkmode></app-darkmode>
+          </a>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
